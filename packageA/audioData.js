@@ -1,234 +1,234 @@
 ﻿/**
- * 鐚挭鍙敜鍣?- 闊抽鏁版嵁鏄犲皠琛?
- * 鎵€鏈夋寜閽厤缃俊鎭?
+ * 猫咪召唤器 - 音频数据映射表
+ * 所有按钮配置信息
  */
 
 const audioData = {
-  // ===== 妯″潡涓€锛氱尗鍜鑹茬被 =====
+  // ===== 模块一：猫咪角色类 =====
   meiduan: {
     id: 'meiduan',
-    name: '涓夊瞾缇庣煭灏忓▏濞?,
-    desc: '濞囨淮婊寸殑鍠靛彨澹?,
-    icon: '馃憫',
+    name: '三岁美短小娇娘',
+    desc: '娇滴滴的喵叫声',
+    icon: '👑',
     category: 'role',
-    audioUrl: '/packageA/audio/涓夊瞾缇庣煭灏忓▏濞?mp3'
+    audioUrl: '/packageA/audio/三岁美短小娇娘.mp3'
   },
   lihua: {
     id: 'lihua',
-    name: '鍗佸叓鏂ょ寷鐢风嫺鑺?,
-    desc: '浣庢矇鏈夊姏鐨勫彨澹?,
-    icon: '馃挭',
+    name: '十八斤猛男狸花',
+    desc: '低沉有力的叫声',
+    icon: '💪',
     category: 'role',
-    audioUrl: '/packageA/audio/鍗佸叓鏂ょ寷鐢风嫺鑺?mp3'
+    audioUrl: '/packageA/audio/十八斤猛男狸花.mp3'
   },
   buou: {
     id: 'buou',
-    name: '鍌插▏甯冨伓澶у皬濮?,
-    desc: '楂樺偛鐨勫柕澹?,
-    icon: '馃懜',
+    name: '傲娇布偶大小姐',
+    desc: '高傲的喵声',
+    icon: '👸',
     category: 'role',
-    audioUrl: '/packageA/audio/鍌插▏甯冨伓澶у皬濮?mp3'
+    audioUrl: '/packageA/audio/傲娇布偶大小姐.mp3'
   },
   xianluo: {
     id: 'xianluo',
-    name: '璇濈棬鏆圭綏灏忚瘽鐥?,
-    desc: '杩炵画涓嶆柇鐨勫柕鍠靛０',
-    icon: '馃棧锔?,
+    name: '话痨暹罗小话痨',
+    desc: '连续不断的喵喵声',
+    icon: '🗣️',
     category: 'role',
-    audioUrl: '/packageA/audio/璇濈棬鏆圭綏灏忚瘽鐥?mp3'
+    audioUrl: '/packageA/audio/话痨暹罗小话痨.mp3'
   },
   juzuo: {
     id: 'juzuo',
-    name: '姗樺骇澶т汉',
-    desc: '鎱垫噿鑲ヨ儢鐨勫彨澹?,
-    icon: '馃崐',
+    name: '橘座大人',
+    desc: '慵懒肥胖的叫声',
+    icon: '🍊',
     category: 'role',
-    audioUrl: '/packageA/audio/姗樺骇澶т汉.mp3'
+    audioUrl: '/packageA/audio/橘座大人.mp3'
   },
   heimao: {
     id: 'heimao',
-    name: '榛戠尗璀﹂暱',
-    desc: '璀﹁鐨勫彨澹?,
-    icon: '馃暥锔?,
+    name: '黑猫警长',
+    desc: '警觉的叫声',
+    icon: '🕶️',
     category: 'role',
-    audioUrl: '/packageA/audio/榛戠尗璀﹂暱.mp3'
+    audioUrl: '/packageA/audio/黑猫警长.mp3'
   },
   nainiu: {
     id: 'nainiu',
-    name: '濂剁墰鐚柉瀛?,
-    desc: '绁炵粡璐ㄧ殑鍠靛彨',
-    icon: '馃悇',
+    name: '奶牛猫疯子',
+    desc: '神经质的喵叫',
+    icon: '🐄',
     category: 'role',
-    audioUrl: '/packageA/audio/濂剁墰鐚柉瀛?mp3'
+    audioUrl: '/packageA/audio/奶牛猫疯子.mp3'
   },
 
-  // ===== 妯″潡浜岋細鏃ュ父浜掑姩绫?=====
+  // ===== 模块二：日常互动类 =====
   laiwan: {
     id: 'laiwan',
-    name: '鏉ョ帺鍛€',
-    desc: '鍏村閭€璇风殑鍙０',
-    icon: '馃幘',
+    name: '来玩呀',
+    desc: '兴奋邀请的叫声',
+    icon: '🎾',
     category: 'daily',
-    audioUrl: '/packageA/audio/鏉ョ帺鍛€.mp3'
+    audioUrl: '/packageA/audio/来玩呀.mp3'
   },
   kaifan: {
     id: 'kaifan',
-    name: '寮€楗暒',
-    desc: '鎬ュ垏璁ㄩ鐨勫彨澹?,
-    icon: '馃嵔锔?,
+    name: '开饭啦',
+    desc: '急切讨食的叫声',
+    icon: '🍽️',
     category: 'daily',
-    audioUrl: '/packageA/audio/寮€楗暒.mp3'
+    audioUrl: '/packageA/audio/开饭啦.mp3'
   },
   momo: {
     id: 'momo',
-    name: '鎽告懜澶?,
-    desc: '婊¤冻鐨勫懠鍣滃０',
-    icon: '鉁?,
+    name: '摸摸头',
+    desc: '满足的呼噜声',
+    icon: '✋',
     category: 'daily',
-    audioUrl: '/packageA/audio/鎽告懜澶?mp3'
+    audioUrl: '/packageA/audio/摸摸头.mp3'
   },
   bugaoxing: {
     id: 'bugaoxing',
-    name: '涓嶉珮鍏?,
-    desc: '鎶辨€ㄧ殑鍠靛０',
-    icon: '馃樉',
+    name: '不高兴',
+    desc: '抱怨的喵声',
+    icon: '😾',
     category: 'daily',
-    audioUrl: '/packageA/audio/涓嶉珮鍏?mp3'
+    audioUrl: '/packageA/audio/不高兴.mp3'
   },
   biepeng: {
     id: 'biepeng',
-    name: '鍒鎴?,
-    desc: '璀﹀憡鐨勪綆鍚?,
-    icon: '鈿狅笍',
+    name: '别碰我',
+    desc: '警告的低吼',
+    icon: '⚠️',
     category: 'daily',
-    audioUrl: '/packageA/audio/鍒鎴?mp3'
+    audioUrl: '/packageA/audio/别碰我.mp3'
   },
   yaobao: {
     id: 'yaobao',
-    name: '瑕佹姳鎶?,
-    desc: '鎾掑▏鐨勫彨澹?,
-    icon: '馃',
+    name: '要抱抱',
+    desc: '撒娇的叫声',
+    icon: '🤗',
     category: 'daily',
-    audioUrl: '/packageA/audio/瑕佹姳鎶?mp3'
+    audioUrl: '/packageA/audio/要抱抱.mp3'
   },
 
-  // ===== 妯″潡涓夛細鎯呯华琛ㄨ揪绫?=====
+  // ===== 模块三：情绪表达类 =====
   gaoxing: {
     id: 'gaoxing',
-    name: '楂樺叴',
-    desc: '娆㈠揩鐨勫柕鍙?,
-    icon: '馃樃',
+    name: '高兴',
+    desc: '欢快的喵叫',
+    icon: '😸',
     category: 'emotion',
-    audioUrl: '/packageA/audio/楂樺叴.mp3'
+    audioUrl: '/packageA/audio/高兴.mp3'
   },
   beishang: {
     id: 'beishang',
-    name: '鎮蹭激',
-    desc: '鍝€鎬ㄧ殑鍠靛憸',
-    icon: '馃樋',
+    name: '悲伤',
+    desc: '哀怨的喵呜',
+    icon: '😿',
     category: 'emotion',
-    audioUrl: '/packageA/audio/鎮蹭激.mp3'
+    audioUrl: '/packageA/audio/悲伤.mp3'
   },
   jingya: {
     id: 'jingya',
-    name: '鎯婅',
-    desc: '鐭績鐨勫柕澹?,
-    icon: '馃樅',
+    name: '惊讶',
+    desc: '短促的喵声',
+    icon: '😺',
     category: 'emotion',
-    audioUrl: '/packageA/audio/鎯婅.mp3'
+    audioUrl: '/packageA/audio/惊讶.mp3'
   },
   shengqi: {
     id: 'shengqi',
-    name: '鐢熸皵',
-    desc: '鎰ゆ€掔殑鍝堟皵',
-    icon: '馃樉',
+    name: '生气',
+    desc: '愤怒的哈气',
+    icon: '😾',
     category: 'emotion',
-    audioUrl: '/packageA/audio/鐢熸皵.mp3'
+    audioUrl: '/packageA/audio/生气.mp3'
   },
   kunle: {
     id: 'kunle',
-    name: '鍥颁簡',
-    desc: '鎵撳搱娆犲０',
-    icon: '馃槾',
+    name: '困了',
+    desc: '打哈欠声',
+    icon: '😴',
     category: 'emotion',
-    audioUrl: '/packageA/audio/鍥颁簡.mp3'
+    audioUrl: '/packageA/audio/困了.mp3'
   },
   haoqi: {
     id: 'haoqi',
-    name: '濂藉',
-    desc: '鐤戞儜鐨勫柕澹?,
-    icon: '馃',
+    name: '好奇',
+    desc: '疑惑的喵声',
+    icon: '🤔',
     category: 'emotion',
-    audioUrl: '/packageA/audio/濂藉.mp3'
+    audioUrl: '/packageA/audio/好奇.mp3'
   },
 
-  // ===== 妯″潡鍥涳細瓒ｅ懗鍦烘櫙绫?=====
+  // ===== 模块四：趣味场景类 =====
   cainai: {
     id: 'cainai',
-    name: '韪╁ザ鏃堕棿',
-    desc: '韪╁ザ+鍛煎櫆澹?,
-    icon: '馃惥',
+    name: '踩奶时间',
+    desc: '踩奶+呼噜声',
+    icon: '🐾',
     category: 'scene',
-    audioUrl: '/packageA/audio/韪╁ザ鏃堕棿.mp3'
+    audioUrl: '/packageA/audio/踩奶时间.mp3'
   },
   paoku: {
     id: 'paoku',
-    name: '璺戦叿妯″紡',
-    desc: '濂旇窇+纰版挒澹?,
-    icon: '馃弮',
+    name: '跑酷模式',
+    desc: '奔跑+碰撞声',
+    icon: '🏃',
     category: 'scene',
-    audioUrl: '/packageA/audio/璺戦叿妯″紡.mp3'
+    audioUrl: '/packageA/audio/跑酷模式.mp3'
   },
   bengdi: {
     id: 'bengdi',
-    name: '娣卞韫﹁开',
-    desc: '澶滅尗瀛愬彨澹?,
-    icon: '馃暫',
+    name: '深夜蹦迪',
+    desc: '夜猫子叫声',
+    icon: '🕺',
     category: 'scene',
-    audioUrl: '/packageA/audio/娣卞韫﹁开.mp3'
+    audioUrl: '/packageA/audio/深夜蹦迪.mp3'
   },
   chaojia: {
     id: 'chaojia',
-    name: '鐚尗鍚垫灦',
-    desc: '澶氱尗瀵瑰硻澹?,
-    icon: '馃惐',
+    name: '猫猫吵架',
+    desc: '多猫对峙声',
+    icon: '🐱',
     category: 'scene',
-    audioUrl: '/packageA/audio/鐚尗鍚垫灦.mp3'
+    audioUrl: '/packageA/audio/猫猫吵架.mp3'
   },
   qiukaimen: {
     id: 'qiukaimen',
-    name: '姹傚紑闂?,
-    desc: '鎶撻棬+鍙０',
-    icon: '馃毆',
+    name: '求开门',
+    desc: '抓门+叫声',
+    icon: '🚪',
     category: 'scene',
-    audioUrl: '/packageA/audio/姹傚紑闂?mp3'
+    audioUrl: '/packageA/audio/求开门.mp3'
   }
 }
 
-// 鍒嗙被閰嶇疆
+// 分类配置
 const categories = [
-  { key: 'role', name: '鐚挭瑙掕壊', icon: '馃惐' },
-  { key: 'daily', name: '鏃ュ父浜掑姩', icon: '馃幃' },
-  { key: 'emotion', name: '鎯呯华琛ㄨ揪', icon: '馃挄' },
-  { key: 'scene', name: '瓒ｅ懗鍦烘櫙', icon: '馃幀' }
+  { key: 'role', name: '猫咪角色', icon: '🐱' },
+  { key: 'daily', name: '日常互动', icon: '🎮' },
+  { key: 'emotion', name: '情绪表达', icon: '💕' },
+  { key: 'scene', name: '趣味场景', icon: '🎬' }
 ]
 
 /**
- * 鏍规嵁鍒嗙被鑾峰彇闊抽鍒楄〃
+ * 根据分类获取音频列表
  */
 function getAudioByCategory(category) {
   return Object.values(audioData).filter(item => item.category === category)
 }
 
 /**
- * 鑾峰彇鎵€鏈夐煶棰戝垪琛?
+ * 获取所有音频列表
  */
 function getAllAudio() {
   return Object.values(audioData)
 }
 
 /**
- * 闅忔満鑾峰彇涓€涓煶棰?
+ * 随机获取一个音频
  */
 function getRandomAudio() {
   const allAudio = getAllAudio()
@@ -237,7 +237,7 @@ function getRandomAudio() {
 }
 
 /**
- * 鏍规嵁ID鑾峰彇闊抽
+ * 根据ID获取音频
  */
 function getAudioById(id) {
   return audioData[id] || null
@@ -251,4 +251,3 @@ module.exports = {
   getRandomAudio,
   getAudioById
 }
-
