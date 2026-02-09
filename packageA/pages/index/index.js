@@ -1,6 +1,6 @@
 // pages/index/index.js
 const app = getApp()
-const { categories, getAudioByCategory, getRandomAudio, getAudioById, getAllAudio } = require('../../utils/audioData')
+const { categories, getAudioByCategory, getRandomAudio, getAudioById, getAllAudio } = require('../../audioData')
 
 Page({
   data: {
@@ -331,7 +331,7 @@ Page({
   onShareAppMessage() {
     return {
       title: '🐱 猫咪召唤器 - 点击召唤你的猫咪！',
-      path: '/pages/index/index'
+      path: '/pages/landing/landing'
     }
   },
 
