@@ -1,0 +1,135 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <!-- 顶部 Logo 区域 -->
+  <view class="header">
+    <text class="header-icon">🐱</text>
+    <text class="header-title">猫咪召唤器</text>
+    <text class="header-subtitle">点击按钮，召唤你的猫咪~</text>
+  </view>
+
+  <!-- 分类标签栏 -->
+  <view class="category-tabs">
+    <view
+      class="tab-item {{currentCategory === item.key ? 'tab-active' : ''}}"
+      wx:for="{{categories}}"
+      wx:key="key"
+      data-category="{{item.key}}"
+      bindtap="onCategoryTap"
+    >
+      <text class="tab-icon">{{item.icon}}</text>
+      <text class="tab-name">{{item.name}}</text>
+    </view>
+  </view>
+
+  <!-- 按钮网格区域 -->
+  <view class="button-grid">
+    <view
+      class="sound-btn {{playingId === item.id ? 'sound-btn-playing' : ''}} {{item.id === lastTappedId ? 'sound-btn-tap' : ''}}"
+      wx:for="{{currentList}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindtap="onSoundTap"
+      bindlongpress="onSoundLongPress"
+    >
+      <view class="btn-icon-wrap">
+        <text class="btn-icon">{{item.icon}}</text>
+        <!-- 播放中动画指示 -->
+        <view class="playing-indicator" wx:if="{{playingId === item.id}}">
+          <view class="wave wave1"></view>
+          <view class="wave wave2"></view>
+          <view class="wave wave3"></view>
+        </view>
+      </view>
+      <text class="btn-name">{{item.name}}</text>
+      <!-- 收藏标记 -->
+      <view class="fav-mark" wx:if="{{favorites.includes(item.id)}}">
+        <text>❤️</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部控制区 -->
+  <view class="control-bar">
+    <!-- 随机播放按钮 -->
+    <view class="control-btn random-btn" bindtap="onRandomPlay">
+      <text class="control-icon">🎲</text>
+      <text class="control-text">随机播放</text>
+    </view>
+
+    <!-- 音量控制 -->
+    <view class="volume-control">
+      <text class="volume-icon">🔊</text>
+      <slider
+        class="volume-slider"
+        min="0"
+        max="100"
+        value="{{volumePercent}}"
+        activeColor="#FF8C42"
+        backgroundColor="#E0D5C5"
+        block-size="20"
+        block-color="#FF8C42"
+        bindchange="onVolumeChange"
+      />
+    </view>
+  </view>
+
+  <!-- 浮动按钮区域 -->
+  <view class="float-btns">
+    <!-- 收藏按钮 -->
+    <view class="float-btn {{showPanel === 'favorites' ? 'float-btn-active' : ''}}" bindtap="onToggleFavorites">
+      <text>⭐</text>
+    </view>
+    <!-- 历史按钮 -->
+    <view class="float-btn {{showPanel === 'history' ? 'float-btn-active' : ''}}" bindtap="onToggleHistory">
+      <text>📋</text>
+    </view>
+  </view>
+
+  <!-- 收藏/历史面板 -->
+  <view class="side-panel {{showPanel ? 'side-panel-show' : ''}}" wx:if="{{showPanel}}">
+    <view class="panel-mask" bindtap="onClosePanel"></view>
+    <view class="panel-content">
+      <view class="panel-header">
+        <text class="panel-title">{{showPanel === 'favorites' ? '我的收藏' : '播放历史'}}</text>
+        <view class="panel-close" bindtap="onClosePanel">
+          <text>✕</text>
+        </view>
+      </view>
+      <view class="panel-list" wx:if="{{panelList.length > 0}}">
+        <view
+          class="panel-item"
+          wx:for="{{panelList}}"
+          wx:key="id"
+          data-id="{{item.id}}"
+          bindtap="onPanelItemTap"
+        >
+          <text class="panel-item-icon">{{item.icon}}</text>
+          <text class="panel-item-name">{{item.name}}</text>
+          <text class="panel-item-desc">{{item.desc}}</text>
+        </view>
+      </view>
+      <view class="panel-empty" wx:else>
+        <text class="empty-icon">😿</text>
+        <text class="empty-text">{{showPanel === 'favorites' ? '还没有收藏哦~' : '还没有播放记录~'}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 长按提示弹窗 -->
+  <view class="tooltip {{showTooltip ? 'tooltip-show' : ''}}" wx:if="{{showTooltip}}">
+    <view class="tooltip-mask" bindtap="onCloseTooltip"></view>
+    <view class="tooltip-content">
+      <text class="tooltip-icon">{{tooltipData.icon}}</text>
+      <text class="tooltip-name">{{tooltipData.name}}</text>
+      <text class="tooltip-desc">{{tooltipData.desc}}</text>
+      <view class="tooltip-actions">
+        <view class="tooltip-btn" bindtap="onTooltipPlay" data-id="{{tooltipData.id}}">
+          <text>▶️ 播放</text>
+        </view>
+        <view class="tooltip-btn" bindtap="onTooltipFav" data-id="{{tooltipData.id}}">
+          <text>{{favorites.includes(tooltipData.id) ? '💔 取消收藏' : '❤️ 收藏'}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

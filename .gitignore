@@ -1,0 +1,27 @@
+# 微信小程序
+node_modules/
+miniprogram_npm/
+project.private.config.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# 临时文件
+*.log
+*.tmp
+
+# 工具脚本
+split_audio.py
+
+# Claude 配置
+.claude/
