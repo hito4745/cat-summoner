@@ -1,7 +1,24 @@
 {
   "description": "猫咪召唤器 - 趣味猫咪声音互动小程序",
   "packOptions": {
-    "ignore": [],
+    "ignore": [
+      {
+        "type": "folder",
+        "value": "audio_backup"
+      },
+      {
+        "type": "folder",
+        "value": ".claude"
+      },
+      {
+        "type": "file",
+        "value": "compress_audio.py"
+      },
+      {
+        "type": "file",
+        "value": "split_audio.py"
+      }
+    ],
     "include": []
   },
   "setting": {
